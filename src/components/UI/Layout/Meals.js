@@ -1,5 +1,6 @@
 import React from 'react'
 import './Meals.css'
+import { Container} from 'react-bootstrap'
 
 const Meals = () => {
     let meals = [{ name: 'Sushi', info: 'Finest fish and veggies', price: '1799' },
@@ -10,12 +11,25 @@ const Meals = () => {
 
     return (
         <div className='d-flex align-items-center justify-content-center mt-2'>
-            <ul className='meals' style={{borderRadius : '15px'}}>
+            <ul className='meals' style={{ borderRadius: '15px' }}>
                 {meals.map((meal) => (
-                    <li style={{marginTop:'1rem'}}>
-                        <h5>{meal.name}</h5>
-                        <p className='info'>{meal.info}</p>
-                        <p className='price'>${meal.price}</p>
+                    <li style={{ marginTop: '1rem' }}>
+                        <Container className='d-flex flex-row justify-content-between'>
+                            <div>
+                                <h5>{meal.name}</h5>
+                                <p className='info'>{meal.info}</p>
+                                <p className='price'>${meal.price}</p>
+                            </div>
+                            <div className='d-flex flex-column justify-content-center' style={{width : '11%'}}>
+                                <div className='d-flex'>
+                                <p style={{fontSize : '0.8rem', fontWeight : 'bold'}}>Amount</p>
+                                <input className='text-center' style={{overflow : 'hidden', height : '1.4rem', borderRadius : '5px', marginLeft : '5px', border:'1px solid black'}} type='text'></input>
+                                </div>
+                                <div className='d-flex justify-content-center'>
+                                    <a href='null' className='add-button'>+ Add</a>
+                                </div>
+                            </div>
+                        </Container>
                         <hr></hr>
                     </li>
                 ))}
