@@ -1,0 +1,28 @@
+.main-image {
+    width: 100%;
+    height: 25rem;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+.main-image img {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+}
+
+.summary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #313131;
+    border-radius: 10px;
+    z-index: 10000;
+    padding: 1rem;
+    margin-top : 12rem;
+    position: absolute;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
