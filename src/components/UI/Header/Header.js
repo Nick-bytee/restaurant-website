@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Container } from 'react-bootstrap'
-import CartButton from './CartButton'
+import CartButton from '../../Cart/CartButton'
 import Summary from './Summary'
 import './Header.css'
 

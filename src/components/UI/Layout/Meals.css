@@ -1,0 +1,29 @@
+.meals{
+    background-color: white;
+    width: 70%;
+}
+
+.meals p{
+    margin: 0;
+    padding: 0;
+}
+
+.meals h5{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.meals li{
+    list-style-type: none;
+
+}
+
+.info{
+    font-style: italic;
+}
+
+.price{
+    color: #813d21;
+    font-weight: bold;
+}
