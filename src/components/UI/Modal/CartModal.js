@@ -3,18 +3,18 @@ import Backdrop from '../Backdrop'
 import './CartModal.css'
 import { createPortal } from 'react-dom'
 
-const CartModal = () => {
+const CartModal = (props) => {
     const modal = (
         <React.Fragment>
         <Backdrop/>
-        <div className='modal'>
+        <div className='modals'>
         <div className='content'>
             <h5>Total Amount</h5>
             <p>1399</p>
         </div>
         <footer>
             <div>
-                <button>Close</button>
+                <button onClick={props.onClose}>Close</button>
                 <button className='order-button'>Order</button>
             </div>
         </footer>
