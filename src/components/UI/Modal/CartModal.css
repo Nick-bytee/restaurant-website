@@ -1,0 +1,56 @@
+.modal {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 101;
+    height: auto;
+    width: auto;
+    max-width: 45rem;
+    min-width: 40rem;
+    max-height: 20rem;
+    display: block;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content p {
+    font-weight: bold;
+  }
+
+  .content h5{
+    font-weight: bold;
+  }
+
+  footer {
+    display: flex;
+    justify-content: flex-end
+  }
+
+  footer button{
+    background-color: white;
+    border: 1px solid #54060e;
+    border-radius: 50px;
+    margin : 1px;
+    padding: 0.4rem;
+    width: 6rem;
+    color : #54060e;
+  }
+
+  footer div{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .order-button {
+    background-color: #54060e;
+    color: white;
+    border: 1px solid #54060e;
+  }

@@ -8,7 +8,7 @@ import './Header.css'
 const Header = () => {
     return (
         <Fragment>
-            <Container fluid style={{ backgroundColor: '#9d1a1a' }} className='d-flex align-items-center justify-content-around'>
+            <Container fluid  className='header'>
                 <div>
                     <h3 style={{color:'white'}}>ReactMeals</h3>
                 </div>
