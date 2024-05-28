@@ -1,21 +1,23 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import { FaCartPlus } from "react-icons/fa";
 import CartModal from '../UI/Modal/CartModal';
+import CartContext from '../Context/CartContext';
+import './CartButton.css'
 
 const CartButton = () => {
   const [isOpen, setIsOpen] = useState(false)
-
+  const cartProvider = useContext(CartContext)
   const cartCloseHandler = () => {
     setIsOpen(false)
   }
 
   return (
     <React.Fragment>
-      <div onClick={(() => {setIsOpen(true)})} className='d-flex br-2 align-items-center justify-content-center' style={{  borderRadius : '40px', backgroundColor : '#611313', margin : '0.65rem', paddingLeft : '15px', paddingRight : '15px', cursor : 'pointer'}}>
+      <div onClick={(() => {setIsOpen(true)})} className='cart-button'>
             <FaCartPlus className='m-2' style={{color:'white'}}/>
             <p className='m-2 p-0' style={{fontWeight : 'bold', color : 'white'}}>Your Cart</p>
-            <div className='d-flex br-2 align-items-center justify-content-center m-1' style={{  borderRadius : '40px', backgroundColor : '#9d1a1a', paddingLeft : '15px', paddingRight : '15px'}}>
-                <p style={{fontWeight : 'bold', color:'white'}} className='m-0 p-0'>0</p>
+            <div className='cart-items'>
+                <p>{cartProvider.items.length}</p>
             </div>
         </div>
         {isOpen ? <CartModal onClose={cartCloseHandler}/> : ''}
