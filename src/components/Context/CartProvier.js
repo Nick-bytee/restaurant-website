@@ -7,7 +7,11 @@ const CartProvider = (props) => {
     const addToCartHandler = (item) => {
         setItems((prevItems) => [...prevItems, item])
     }
-    const removeFromCartHandler = (id) => {}
+    const removeFromCartHandler = (id) => {
+        const filteredItems = items.filter((item) => item[0].id !== id)
+        console.log(filteredItems)
+        setItems(filteredItems)
+    }
     
     const cartContext = {
         items : items,
